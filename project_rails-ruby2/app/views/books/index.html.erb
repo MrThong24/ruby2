@@ -1,0 +1,45 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<table class="table">
+ <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Mã Học Sinh</th>
+      <th scope="col">Họ tên</th>
+      <th scope="col">Lớp</th>
+      <th scope="col">Mã Sách</th>
+      <th scope="col">Tên Sách</th>
+      <th scope="col">Tác giả</th>
+      <th scope="col">Số bảo mật</th>
+      <th scope="col">Ngày mượn</th>
+      <th scope="col">Ngày trả</th>
+
+      <th scope="col">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book,index| %>
+      <tr>
+        <th scope="row"><%= index%></th>
+        <td><%= book.mahs_263 %></td>
+        <td><%= book.hoten_263 %></td>
+        <td><%= book.lop_263 %></td>
+        <td><%= book.masanh_263 %></td>
+        <td><%= book.tensach_263 %></td>
+        <td><%= book.tentacgia_263 %></td>
+        <td><%= book.soBM_263 %></td>
+        <td><%= book.ngaymuon_263 %></td>
+        <td><%= book.ngaytra_263 %></td>
+     
+        <td><%= book.ghichu_263 %></td>
+      
+        <td><%= link_to "Show", book %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+
+<%= link_to "New book", new_book_path %>
